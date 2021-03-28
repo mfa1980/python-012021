@@ -1,0 +1,28 @@
+jmeno,prijimeni,telefonni_cislo,cislo_zamestnance,mesto,date,hours,project
+Brian,Hall,+421 949 656 098,30,Praha,2021-02-01,4.4,W05
+Dominika,Kopecká,722 747 626,34,Praha,2021-02-01,2.2,YLI
+Dominika,Kopecká,722 747 626,34,Praha,2021-02-03,2.6,YLI
+Catherine,Bender,604 068 460,40,Praha,2021-02-02,3.1,YLI
+Catherine,Bender,604 068 460,40,Praha,2021-02-03,5.5,W05
+Jeffrey,Šťastný,607 628 821,44,Praha,2021-02-02,2.4,YLI
+Kamila,Říhová,+421 948 396 069,47,Praha,2021-02-02,2.6,W05
+Kamila,Říhová,+421 948 396 069,47,Praha,2021-02-03,2.8,TE1
+Karolína,Short,721 589 083,53,Praha,2021-02-02,5.6,F30
+Karolína,Short,721 589 083,53,Praha,2021-02-02,3.6,YLI
+Karolína,Short,721 589 083,53,Praha,2021-02-03,4.0,W05
+Michelle,Vlčková,+421 41 720 7806,54,Praha,2021-02-01,2.4,TE1
+Jeffrey,Pospíšil,+421 55 491 6940,56,Praha,2021-02-02,5.6,F30
+Ladislav,Blažek,+421 910 274 975,57,Praha,2021-02-03,5.2,W05
+Dillon,Black,734 300 978,70,Praha,2021-02-01,3.4,W05
+Robert,Říha,727 351 984,72,Praha,2021-02-01,2.1,JL9
+Stacy,Pospíšilová,727 293 880,3,Plzeň,2021-02-01,5.2,F30
+Jindřich,Howell,+421 39 043 0948,10,Plzeň,2021-02-02,5.3,YLI
+Alexander,Martinez,721 195 689,13,Plzeň,2021-02-01,2.5,F30
+Miroslav,Reed,774 829 074,18,Plzeň,2021-02-03,2.6,F30
+Nela,Šťastná,728 454 176,83,Liberec,2021-02-01,4.1,TE1
+Heather,Marková,604 404 522,84,Liberec,2021-02-01,2.7,YLI
+Jennifer,Brown,775 545 190,86,Liberec,2021-02-03,4.6,TE1
+Jennifer,Brown,775 545 190,86,Liberec,2021-02-03,5.4,YLI
+Ladislava,Blackwell,+421 913 487 200,87,Liberec,2021-02-03,2.1,TE1
+Vasyl,Veselý,603 759 413,92,Liberec,2021-02-01,5.4,W05
+Audrey,Allen,+421 908 839 506,96,Liberec,2021-02-03,3.7,YLI
