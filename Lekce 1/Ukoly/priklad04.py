@@ -66,5 +66,3 @@ for znak in text:
     print("/", end=" ")
   else:
     print(morseCode[znak], end=" ")
-
-

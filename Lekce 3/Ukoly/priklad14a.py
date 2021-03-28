@@ -20,9 +20,6 @@ class Employee:
     self.children = children
 
   def get_net_salary(self):
-    net_salary = 0
-    self.salary = int(self.salary)
-    self.children = int(self.children)
     net_salary = self.salary - (0.15 * self.salary - self.children * 1500)
     return f"{self.name} má čistou mzdu ve výši {net_salary} Kč."
 

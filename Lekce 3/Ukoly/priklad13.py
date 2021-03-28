@@ -15,10 +15,11 @@ class Auto:
     self.registracni_znacka = registracni_znacka
     self.znacka_typ = znacka_typ
     self.kilometry = kilometry
-    self.volne = volne
+    self.volne = True
 
   def pujc_auto(self):
     if self.volne:
+      self.volne = False
       return f"Potvrzuji zapůjčení vozidla."
     return f"Vozidlo není k dispozici."
 
@@ -28,7 +29,6 @@ class Auto:
   def vrat_auto(self, tachometr, dnu):
     self.kilometry = self.kilometry + tachometr
     self.volne = True
-    cena = 0
     if dnu <= 7:
       cena = dnu * 400
     else:
@@ -41,19 +41,15 @@ uzivatel = str(input("Jaký vůz si chceš zapůjčit - zadej buď Škoda nebo P
 if uzivatel == "Peugeot":
   print(auto1.get_info())
   print(auto1.pujc_auto())
-  auto1.volne = False
 if uzivatel == "Škoda":
   print (auto2.get_info())
   print(auto2.pujc_auto())
-  auto2.volne = False
 
 pocet_kilometru = int(input("Zadej počet najetých kilometrů: "))
 pocet_dnu = int(input("Zadej počet dnů zapůjčení vozu: "))
 if uzivatel == "Peugeot":
   print(auto1.vrat_auto(pocet_kilometru, pocet_dnu))
-  auto1.volne = True
   print(auto1.kilometry)
 if uzivatel == "Škoda":
   print(auto2.vrat_auto(pocet_kilometru, pocet_dnu))
-  auto2.volne = True
   print(auto2.kilometry)
