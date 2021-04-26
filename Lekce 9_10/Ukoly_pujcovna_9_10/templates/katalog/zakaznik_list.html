@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Seznam zákazníků</title>
+    <style>
+        body {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        h1,h2 {
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        tr, td {
+            padding: 10px;
+            border-spacing:3;
+        }
+    </style>
+</head>
+<body>
+{% block content %}
+    <table>
+        <tr>
+            <td>Jméno</td>
+            <td>Příjmení</td>
+            <td>Číslo řidičského průkazu</td>
+            <td>Datum narození</td>
+        </tr>
+        {% for zaznam in object_list %}
+        <tr>
+            <td>{{zaznam.jmeno}}</td>
+            <td>{{zaznam.prijmeni}}</td>
+            <td>{{zaznam.ridicak}}</td>
+            <td>{{zaznam.datum_narozeni}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+</body>
+</html>
