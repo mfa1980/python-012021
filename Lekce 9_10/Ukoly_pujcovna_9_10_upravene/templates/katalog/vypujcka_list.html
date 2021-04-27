@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Seznam zapůjčených aut</title>
+    <style>
+        body {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        h1,h2 {
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        tr, td {
+            padding: 10px;
+            border-spacing:3;
+        }
+    </style>
+</head>
+<body>
+<h2>Seznam zapůjčených aut</h2>
+{% block content %}
+<ul>
+    {% for zaznam in object_list %}
+        <li>Datum zapůjčení: {{ zaznam.zacatek }}, datum a čas vrácení: {{ zaznam.konec }},
+            cena: {{ zaznam.cena}}, SPZ vozu: {{zaznam.seznam}}, zákazník: {{zaznam.zakaznik}},
+            průběh: {{zaznam.okamzik}}</li>
+    {% empty %}
+        <li>Neevidujeme žádný záznam.</li>
+    {% endfor %}
+</ul>
+{% url "seznam" as url_seznam %}
+<p><a href="{{url_seznam}}">Odkaz na seznam vozů</a></p>
+{% url "zakaznik" as url_zakaznik %}
+<p><a href="{{url_zakaznik}}">Odkaz na seznam zákazníků</a></p>
+{% url "katalog" as url_katalog %}
+<p><a href="{{url_katalog}}">Zpět na úvodní stránku</a></p>
+{% endblock %}
+</body>
+</html>
