@@ -1,0 +1,8 @@
+{% block content %}
+<p>Pokud nejsi náš zákazník, založit si svůj účet <a href="{%url 'zadej_zakaznika'%}">zde.</a></p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Uložit">
+</form>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail zákazníka</title>
+    <style>
+        body {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        h1,h2 {
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        tr, td {
+            padding: 10px;
+            border-spacing:3;
+        }
+    </style>
+</head>
+<body>
+{% block content %}
+    <p>Jméno a příjmení: {{object.jmeno}} {{object.prijmeni}}</p>
+    <p>Řidičák: {{object.ridicak}}</p>
+    <p>Datum narození: {{object.datum_narozeni}}</p>
+    <p>Typ programu: {{object.program}}</p>
+{% endblock %}
+</body>
+</html>

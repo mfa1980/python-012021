@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Seznam vozů</title>
+    <style>
+        body {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        h1,h2 {
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        tr, td {
+            padding: 10px;
+            border-spacing:3;
+        }
+    </style>
+</head>
+<body>
+{% block content %}
+    <h2>Seznam vozů</h2>
+    <table>
+        <tr>
+            <td>SPZ</td>
+            <td>Značka a typ vozu</td>
+            <td>Počet najetých kilometrů</td>
+            <td>Poslední TK</td>
+            <td>Počet dnů od poslední technické kontroly</td>
+            <td>Schválení</td>
+        </tr>
+        {% for zaznam in object_list %}
+        <tr>
+            <td><a href="{%url 'seznam_detail' zaznam.pk%}">{{zaznam.registracni_znacka}}<a/></td>
+            <td>{{zaznam.znacka_a_typ}}</td>
+            <td>{{zaznam.pocet_km}}</td>
+            <td>{{zaznam.datum_TK}}</td>
+            <td>{{zaznam.technicka}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% url "vypujcka" as url_vypujcka %}
+<p><a href="{{url_vypujcka}}">Odkaz na seznam výpůjček</a></p>
+{% url "zakaznik" as url_zakaznik %}
+<p><a href="{{url_zakaznik}}">Odkaz na seznam zákazníků</a></p>
+<p><a href="{% url 'katalog' %}">Zpět na úvodní stránku</a></p>
+{% endblock %}
+</body>
+</html>

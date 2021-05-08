@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail vozu</title>
+    <style>
+        body {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        h1,h2 {
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        tr, td {
+            padding: 10px;
+            border-spacing:3;
+        }
+    </style>
+</head>
+<body>
+{% block content %}
+    <p>Registrační značka: {{object.registracni_znacka}}</p>
+    <p>Značka a typu vozu: {{object.znacka_a_typ}}</p>
+    <p>Počet najetých kilometrů: {{object.pocet_km}}</p>
+    <p>Datum technické kontroly: {{object.datum_TK}}</p>
+{% endblock %}
+</body>
+</html>
